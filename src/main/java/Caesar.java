@@ -35,6 +35,7 @@ public class Caesar {
 
     public static String encryptCaesarKey(String message, int key) {
         String n = new String();
+        key %= 26;
         for(int i = 0; i < message.length(); i++)
         {
             int c = message.charAt(i);
@@ -51,6 +52,7 @@ public class Caesar {
 
     public static String decryptCaesarKey(String message, int key) {
         String n = new String();
+        key%=26;
         for(int i = 0; i < message.length(); i++)
         {
             int c = message.charAt(i);
